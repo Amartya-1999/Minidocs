@@ -18,11 +18,11 @@ This submission includes:
 
 ## Live Product URL
 
-`<ADD_DEPLOYED_URL_HERE>`
+`(https://drive.google.com/file/d/1TrXY07M4Ya69DfSbmmJb3-047wz9Y_Ig/view?usp=drive_link)`
 
 ## Walkthrough Video URL
 
-`<ADD_LOOM_OR_YOUTUBE_URL_HERE>`
+`(https://minidocs-qkp5.onrender.com)`
 
 ## Seeded Users
 
