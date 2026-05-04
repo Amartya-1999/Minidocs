@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MiniDocs
 
-## Getting Started
+MiniDocs is a lightweight collaborative document editor built for the Ajaia AI-Native Assessment. It is inspired by Google Docs, but intentionally scoped to a focused, working product slice that demonstrates document creation, rich-text editing, file upload, sharing, and persistence.
 
-First, run the development server:
+## Live Demo
+
+Live product URL: `<ADD_DEPLOYED_URL_HERE>`
+
+Walkthrough video: `<ADD_LOOM_OR_YOUTUBE_URL_HERE>`
+
+## Seeded Demo Users
+
+The app uses a lightweight seeded-user model instead of full authentication.
+
+| Name | Email |
+|---|---|
+| Kumar | kumar@demo.com |
+| Alex | alex@demo.com |
+| Maya | maya@demo.com |
+
+Recommended review flow:
+
+1. Select `Kumar`.
+2. Create a new document.
+3. Rename the document.
+4. Edit and format the content.
+5. Save the document.
+6. Share it with `alex@demo.com`.
+7. Switch user to `Alex`.
+8. Confirm the document appears under `Shared With Me`.
+
+## Features
+
+### Document Creation and Editing
+
+Users can:
+
+- Create a new document.
+- Rename a document.
+- Edit document content in the browser.
+- Save and reopen documents.
+- Use basic rich-text formatting:
+  - Bold
+  - Italic
+  - Underline
+  - H1 and H2 headings
+  - Bulleted lists
+  - Numbered lists
+
+### File Upload
+
+Users can upload `.txt` or `.md` files from the dashboard.
+
+The uploaded file is converted into a new editable document. The original file name becomes the document title, and the file content becomes editable rich-text content.
+
+Supported upload types:
+
+- `.txt`
+- `.md`
+
+Unsupported file types are rejected with a clear error message.
+
+### Sharing
+
+MiniDocs includes a simple sharing model:
+
+- Each document has one owner.
+- Owners can share documents with seeded users by email.
+- The dashboard separates:
+  - `My Documents`
+  - `Shared With Me`
+- Shared users can open and edit documents.
+- Only the owner can share a document with others.
+
+### Persistence
+
+Documents, users, and sharing relationships are persisted using SQLite through Prisma.
+
+Documents remain available after page refresh, and document content is stored as HTML so formatting is preserved.
+
+## Tech Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Prisma
+- SQLite
+- TipTap rich-text editor
+- Vitest
+
+## Local Setup
+
+### 1. Install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm install
